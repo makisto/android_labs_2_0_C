@@ -7,6 +7,7 @@ namespace AndroidLab0
 		static void Main(string[] args)
 		{
 			Console.WriteLine("This is a Lab0 for PMU!");
+			Console.ReadKey();
 		}
 	}
 }
