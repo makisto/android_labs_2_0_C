@@ -1,0 +1,14 @@
+stages:
+    - build  
+
+build_job:
+    stage: build
+    only:
+        - branches
+    script:
+        - 'cd AndroidLab0'
+        - '"C:\Users\user\Downloads\Nuget\nuget.exe" restore'
+        - '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" AndroidLab0.sln'
+    artifacts:
+        paths:
+            - 'AndroidLab0\AndroidLab0\bin\Debug\netcoreapp3.1\AndroidLab0.exe'
